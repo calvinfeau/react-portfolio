@@ -11,3 +11,18 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+@font-face {
+  font-family: "Euclid Flex Trial";
+  src: url('./fonts/EuclidFlexBold.woff') format('woff');
+}
+
+@font-face {
+  font-family: "GT America Trial";
+  src: url("./fonts/gt-america-standard-regular.woff") format('woff');
+}
+
+@font-face {
+  font-family: 'GT Pressura Mono';
+  src: url('./fonts/GT-Pressura-Mono-Regular.woff') format('woff');
+}
