@@ -19,7 +19,12 @@ const Title = styled.div`
   justify-content: center;
   align-items: center;
   font-family: "Euclid Flex Trial";
+  font-size: 60px;
   border-bottom: 1px solid white;
+
+  @media only screen and (max-width: 1100px) {
+    font-size: 40px;
+  }
 `;
 
 const Footer = styled.div`
@@ -28,7 +33,13 @@ const Footer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: "Euclid Flex Trial";
+  font-size: 25px;
   border-top: 1px solid white;
+
+  @media only screen and (max-width: 1100px) {
+    font-size: 15px;
+  }
 `;
 
 const Main = styled.div`
@@ -37,6 +48,12 @@ const Main = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-family: "GT America Trial";
+  font-size: 25px;
+
+  @media only screen and (max-width: 1100px) {
+    font-size: 15px;
+  }
 `;
 
 const Text = styled.div`
@@ -44,6 +61,10 @@ const Text = styled.div`
   width: 70%;
   display: flex;
   flex-direction: column;
+
+  @media only screen and (max-width: 1100px) {
+    width: 60%;
+  }
 `;
 
 const Links = styled.div`
@@ -51,6 +72,15 @@ const Links = styled.div`
   width: 20%;
   display: flex;
   flex-direction: column;
+
+  @media only screen and (max-width: 1100px) {
+    width: 30%;
+  }
+`;
+
+const A = styled.a`
+  color: white;
+  text-decoration: underline solid white
 `;
 
 
@@ -67,22 +97,24 @@ class AboutPage extends Component {
             <br /><br />
             I welcome new challenges and always look for new technical knowledge to add on my skills set. I am currently considering all openings for a full stack software engineering role, or focused on backend or frontend.
             <br /><br />
-            For work inquiries, please email <a href="mailto:calvin.feau@gmail.com" target="_top">calvin.feau@gmail.com</a>
+            <span>For work inquiries, please email <A href="mailto:calvin.feau@gmail.com" target="_top">calvin.feau@gmail.com</A></span>
+            <br /><br />
+            <span>To see my projects, click <A href="/projects">here</A></span>
           </Text>
           <Links>
-            <span><i className="material-icons">call_made</i>&nbsp;&nbsp;<a href="https://www.linkedin.com/in/calvin-feau/" target="_blank">LinkedIn</a></span>
+            <span><i className="material-icons">call_made</i>&nbsp;&nbsp;<A href="https://www.linkedin.com/in/calvin-feau/" target="_blank">LinkedIn</A></span>
             <br />
             <span>
-              <i className="material-icons">call_made</i>&nbsp;&nbsp;<a href="#resume">Resume</a>
-              &nbsp;&nbsp;<a href="css/images/CalvinFeau_Resume.pdf" download target="_blank"><i class="material-icons">picture_as_pdf</i></a>
-              &nbsp;&nbsp;<a href="css/images/CalvinFeau_Resume.docx" download><i class="material-icons">description</i></a>
+              <i className="material-icons">call_made</i>&nbsp;&nbsp;<A href="#resume">Resume</A>
+              &nbsp;&nbsp;<A href="css/images/CalvinFeau_Resume.pdf" download target="_blank"><i class="material-icons">picture_as_pdf</i></A>
+              &nbsp;&nbsp;<A href="css/images/CalvinFeau_Resume.docx" download><i class="material-icons">description</i></A>
             </span>
             <br />
-            <span><i className="material-icons">call_made</i>&nbsp;&nbsp;<a href="https://github.com/calvinfeau" target="_blank">Github</a></span>
+            <span><i className="material-icons">call_made</i>&nbsp;&nbsp;<A href="https://github.com/calvinfeau" target="_blank">Github</A></span>
           </Links>
         </Main>
         <Footer>
-          Website designed by&nbsp;<a href="https://www.pechecreme.com/" target="_blank">Peche-Creme</a>&nbsp;& built by Calvin Feau.
+          Website designed by&nbsp;<A href="https://www.pechecreme.com/" target="_blank">Peche-Creme</A>&nbsp;& built by&nbsp;<A href="/">Calvin Feau</A>.
         </Footer>
       </Wrapper>
     )
