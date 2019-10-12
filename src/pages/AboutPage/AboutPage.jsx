@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
 import styled from "styled-components";
 import './AboutPage.css';
 
-const Wrapper = styled.div`
+const AboutWrapper = styled.div`
   height: calc(100vh - 100px);
   width: calc(100vw - 100px);
   background-color: #D74134;
@@ -11,7 +12,7 @@ const Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
 
-  @media only screen and (max-width: 425px) {
+  @media only screen and (max-width: 425px) or (max-height: 425px){
     height: calc(100vh - 40px);
     width: calc(100vw - 40px);
   }
@@ -47,7 +48,7 @@ const Main = styled.div`
   justify-content: space-between;
   align-items: center;
   font-family: "GT America Trial";
-  font-size: 1.4vmax;
+  font-size: 1.3vmax;
 
   @media only screen and (max-width: 425px) and (orientation: portrait) {
     font-size: 1.2vmax;
@@ -82,7 +83,7 @@ const Links = styled.div`
 
 const A = styled.a`
   color: white;
-  text-decoration: underline solid white
+  text-decoration: underline solid white;
 `;
 
 const I = styled.i`
@@ -101,7 +102,7 @@ const I = styled.i`
 class AboutPage extends Component {
   render() {
     return (
-      <Wrapper>
+      <AboutWrapper>
         <Title>
           About
         </Title>
@@ -113,7 +114,7 @@ class AboutPage extends Component {
             <br /><br />
             <span>For work inquiries, please email <A href="mailto:calvin.feau@gmail.com" target="_top">calvin.feau@gmail.com</A></span>
             <br /><br />
-            <span>To see my projects, click <A href="/projects">here</A></span>
+            <span>To see my projects, click <Link style={{color: "white",textDecoration: "underline solid white"}} to="/projects">here</Link></span>
           </Text>
           <Links>
             <span><I className="material-icons">call_made</I>&nbsp;&nbsp;<A href="https://www.linkedin.com/in/calvin-feau/" target="_blank">LinkedIn</A></span>
@@ -125,9 +126,9 @@ class AboutPage extends Component {
         </Main>
         <Footer>
           <span>Website designed by&nbsp;<A href="https://www.pechecreme.com/" target="_blank">Peche-Creme</A></span>
-          <span>&copy; Copyright 2019 <A href="/">Calvin Feau</A></span>
+          <span>&copy; Copyright 2019 <Link style={{color: "white",textDecoration: "underline solid white"}} to="/">Calvin Feau</Link></span>
         </Footer>
-      </Wrapper>
+      </AboutWrapper>
     )
   }
 }
