@@ -7,6 +7,11 @@ import styled from "styled-components";
 
 const Wrapper = styled.div`
   padding: 50px;
+
+  @media only screen and (max-width: 425px){
+    padding: 20px;
+  }
+
 `;
 
 const HomeWrapper = styled.div`
