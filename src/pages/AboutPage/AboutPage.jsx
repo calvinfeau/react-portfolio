@@ -11,7 +11,7 @@ const Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
 
-  @media only screen and (max-width: 425px){
+  @media only screen and (max-width: 425px) {
     height: calc(100vh - 40px);
     width: calc(100vw - 40px);
   }
@@ -26,34 +26,18 @@ const Title = styled.div`
   font-family: "Euclid Flex Trial";
   font-size: 3vmax;
   border-bottom: 1px solid white;
-
-  // @media only screen and (max-width: 1100px) {
-  //   font-size: 40px;
-  // }
-
-  // @media only screen and (max-width: 425px){
-  //   font-size: 30px;
-  // }
 `;
 
 const Footer = styled.div`
   height: 20%;
   width: 70%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   font-family: "Euclid Flex Trial";
   font-size: 1.5vmax;
   border-top: 1px solid white;
-
-  // @media only screen and (max-width: 1100px) {
-  //   font-size: 15px;
-  // }
-
-  // @media only screen and (max-width: 425px){
-  //   font-size: 8px;
-  // }
-
 `;
 
 const Main = styled.div`
@@ -63,15 +47,15 @@ const Main = styled.div`
   justify-content: space-between;
   align-items: center;
   font-family: "GT America Trial";
-  font-size: 1.5vmax;
+  font-size: 1.4vmax;
 
-  // @media only screen and (max-width: 1100px) {
-  //   font-size: 15px;
-  // }
+  @media only screen and (max-width: 425px) and (orientation: portrait) {
+    font-size: 1.2vmax;
+  }
 
-  // @media only screen and (max-width: 350px) {
-  //   font-size: 8px;
-  // }
+  @media only screen and (max-width: 850px) and (orientation: landscape) {
+    font-size: 1vmax;
+  }
 `;
 
 const Text = styled.div`
@@ -108,7 +92,7 @@ const I = styled.i`
     font-size: 24px;
   }
 
-  @media only screen and (max-width: 425px) {
+  @media only screen and (max-width: 450px) {
     font-size: 18px;
   }
 `;
@@ -136,15 +120,12 @@ class AboutPage extends Component {
             <br />
             <span><I className="material-icons">call_made</I>&nbsp;&nbsp;<A href="https://github.com/calvinfeau" target="_blank">Github</A></span>
             <br />
-            <span>
-              <I className="material-icons">call_made</I>&nbsp;&nbsp;<A href="#resume">Resume</A>
-              &nbsp;&nbsp;<A href="css/images/CalvinFeau_Resume.pdf" download target="_blank"><I className="material-icons">picture_as_pdf</I></A>
-              &nbsp;&nbsp;<A href="css/images/CalvinFeau_Resume.docx" download><I className="material-icons">description</I></A>
-            </span>
+            <span><I className="material-icons">call_made</I>&nbsp;&nbsp;<A href="%PUBLIC_URL%/Calvin_Feau_Resume.pdf" download target="_blank">Resume</A></span>
           </Links>
         </Main>
         <Footer>
-          Website designed by&nbsp;<A href="https://www.pechecreme.com/" target="_blank">Peche-Creme</A>&nbsp;& built by&nbsp;<A href="/">Calvin Feau</A>.
+          <span>Website designed by&nbsp;<A href="https://www.pechecreme.com/" target="_blank">Peche-Creme</A></span>
+          <span>&copy; Copyright 2019 <A href="/">Calvin Feau</A></span>
         </Footer>
       </Wrapper>
     )
