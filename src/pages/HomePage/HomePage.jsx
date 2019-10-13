@@ -2,28 +2,88 @@ import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import styled from "styled-components";
 
+const Border = styled.div`
+  position: absolute;
+  z-index: -1;
+  height: 50px;
+  width: 50px;
+  animation: bordermove 8s infinite 1s;
+
+  @keyframes bordermove {
+    0% {
+      left: 0;
+      top: 0;
+      background-color: #38429B;
+    }
+    25% {
+      top: 0;
+      left: calc(100vw - 50px);
+      background-color: #38429B;
+    }
+    50% {
+      left: calc(100vw - 50px);
+      top: calc(100vh - 50px);
+      background-color: #D74134;
+    }
+    75% {
+      left: 0;
+      top: calc(100vh - 50px);
+      background-color: #D74134;
+    }
+    100% {
+      top: 0;
+      left: 0;
+      background-color: #38429B;
+    }
+  }
+
+  @media only screen and (max-width: 425px), (max-height: 425px) {
+    height: 20px;
+    width: 20px;
+
+    @keyframes bordermove {
+        0% {
+          left: 0;
+          top: 0;
+          background-color: #38429B;
+        }
+        25% {
+          top: 0;
+          left: calc(100vw - 20px);
+          background-color: #38429B;
+        }
+        50% {
+          left: calc(100vw - 20px);
+          top: calc(100vh - 20px);
+          background-color: #D74134;
+        }
+        75% {
+          left: 0;
+          top: calc(100vh - 20px);
+          background-color: #D74134;
+        }
+        100% {
+          top: 0;
+          left: 0;
+          background-color: #38429B;
+        }
+      }
+}
+`;
+
 const HomeWrapper = styled.div`
     height: calc(100vh - 100px);
     width: calc(100vw - 100px);
+    margin: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: white;
 
-    @media only screen and (max-width: 425px) or (max-height: 425px) {
-    height: calc(100vh - 40px);
-    width: calc(100vw - 40px);
-
-    @keyframes animate {
-        0% {
-            border-bottom: 50px solid #38429B;
-            border-top: 50px solid #D74134;
-            border-left: 50px solid white;
-            border-right: 50px solid white;
-        }
-        50% {
-            bor
-        }
-    }
+    @media only screen and (max-width: 425px), (max-height: 425px) {
+        margin: 20px;
+        height: calc(100vh - 40px);
+        width: calc(100vw - 40px);
     }
 `;
 
@@ -73,18 +133,21 @@ const Links = styled.div`
 class HomePage extends Component {
     render() {
         return (
-            <HomeWrapper>
-                <Title><span style={{color:"#38429B"}}>CALVIN</span>&nbsp;&nbsp;<span style={{color:"#D74134"}}>FEAU</span></Title>
-                <Main>
-                    <Text1>I'm a full stack software engineer,</Text1>
-                    <Text>and a <span style={{color:"#D74134", fontWeight:"bold"}}>passionate</span> problem <span style={{color:"#38429B", fontWeight:"bold"}}>solver</span> </Text>
-                    <Text2>who enjoys getting lost in the flow of web development.</Text2>
-                </Main>
-                <Links>
-                    <Link style={{color:"#38429B"}} to="/projects">Projects</Link>
-                    <Link style={{color:"#D74134"}}to="/about">About</Link>
-                </Links>
-            </HomeWrapper>
+            <>
+                <Border>&nbsp;</Border>
+                <HomeWrapper>
+                    <Title><span style={{color:"#38429B"}}>CALVIN</span>&nbsp;&nbsp;<span style={{color:"#D74134"}}>FEAU</span></Title>
+                    <Main>
+                        <Text1>I'm a full stack software engineer,</Text1>
+                        <Text>and a <span style={{color:"#D74134", fontWeight:"bold"}}>passionate</span> problem <span style={{color:"#38429B", fontWeight:"bold"}}>solver</span> </Text>
+                        <Text2>who enjoys getting lost in the flow of web development.</Text2>
+                    </Main>
+                    <Links>
+                        <Link style={{color:"#38429B"}} to="/projects">Projects</Link>
+                        <Link style={{color:"#D74134"}}to="/about">About</Link>
+                    </Links>
+                </HomeWrapper>
+            </>
         )
     }
 }

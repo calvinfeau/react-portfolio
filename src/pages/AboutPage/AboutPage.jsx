@@ -6,13 +6,15 @@ import './AboutPage.css';
 const AboutWrapper = styled.div`
   height: calc(100vh - 100px);
   width: calc(100vw - 100px);
+  margin: 50px;
   background-color: #D74134;
   color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  @media only screen and (max-width: 425px) or (max-height: 425px){
+  @media only screen and (max-width: 425px), (max-height: 425px){
+    margin: 20px;
     height: calc(100vh - 40px);
     width: calc(100vw - 40px);
   }
@@ -125,7 +127,7 @@ class AboutPage extends Component {
           </Links>
         </Main>
         <Footer>
-          <span>Website designed by&nbsp;<A href="https://www.pechecreme.com/" target="_blank">Peche-Creme</A></span>
+          {/* <span>Website designed by&nbsp;<A href="https://www.pechecreme.com/" target="_blank">Peche-Creme</A></span> */}
           <span>&copy; Copyright 2019 <Link style={{color: "white",textDecoration: "underline solid white"}} to="/">Calvin Feau</Link></span>
         </Footer>
       </AboutWrapper>
