@@ -6,14 +6,13 @@ import image1 from '../Project1/safeparkingla_form_1.png';
 const Frame = styled.div`
   display: flex;
   flex-direction: column;
-  // justify-content: space-around;
   align-items: center;
   height: calc(100vh - 100px);
   width: calc(100vw - 100px);
   margin: 50px;
   color: #38429B;
 
-  @media only screen and (max-width: 425px), (max-height: 425px){
+  @media only screen and (max-width: 800px) {
     margin: 20px;
     height: calc(100vh - 40px);
     width: calc(100vw - 40px);
@@ -37,18 +36,41 @@ const Main = styled.div`
   height: 60%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: start;
+
+  @media only screen and (max-width: 800px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
 `;
 
 const Text = styled.div`
-  height: 70%;
+  height: 50%;
   width: 40%;
   font-family: "GT America Trial";
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 10%;
+
+
+  @media only screen and (max-width: 800px) {
+    height: 50%;
+    width: 70%;
+    font-size: 1.5vmax;
+  }
 `;
 
 const Image = styled.img`
-  height: auto;
+  max-height: auto;
   max-width: 50%;
+  padding-top: 10%;
+
+
+  @media only screen and (max-width: 800px) {
+    max-width: 70%;
+  }
 `;
 
 const backBtnStyle = {
@@ -56,7 +78,7 @@ const backBtnStyle = {
   fontFamily: "Euclid Flex Trial",
   color: "#38429B",
   textDecoration: "none",
-  zIndex: "3"
+  zIndex: "3",
 }
 
 class Project1 extends Component {
@@ -68,14 +90,10 @@ class Project1 extends Component {
         <Main>
           <Image src={image1}></Image>
           <Text>
-            Worked with a team of 4 UX/UI designers and another developer. 
-            <br /><br />
-            Led the development process and built the entire backend
-            <br /><br />
-            Used Zeplin to accurately follow designers guidelines and Github for version control during development
-            <br /><br />
-            Won the judges price of the contest
-            <br /><br />
+            <span>Worked with a team of 4 UX/UI designers and another developer.</span>
+            <span>Led the development process and built the entire backend.</span>
+            <span>Used Zeplin to accurately follow designers guidelines and Github for version control during development.</span>
+            <span>Won the judges price of the contest.</span>
             <a style={backBtnStyle} href="https://safeparkingla.herokuapp.com/" target="_blank">View Project</a>
           </Text>
         </Main>

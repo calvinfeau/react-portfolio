@@ -8,18 +8,20 @@ import Project3 from "../../components/Project3/Project3";
 import Project4 from "../../components/Project4/Project4";
 import Project5 from "../../components/Project5/Project5";
 
+
 const Frame = styled.div`
 position: fixed;
 top: 0;
 left: 0;
-border: 50px solid #38429B;
+--border-size: 50px;
+border: var(--border-size) solid #38429B;
 z-index: 2;
 background-color: transparent;
 height: calc(100vh - 100px);
 width: calc(100vw - 100px);
 
-@media only screen and (max-width: 425px), (max-height: 425px){
-  border: 20px solid #38429B;
+@media only screen and (max-width: 800px) {
+  --border-size: 20px;
   height: calc(100vh - 40px);
   width: calc(100vw - 40px);
 }
@@ -28,9 +30,12 @@ width: calc(100vw - 100px);
 
 const backBtnStyle = {
   position: "fixed",
-  top: "calc(100vh - 110px)",
-  left: "calc(100vw - 110px)",
-  color: "#38429B",
+  top: "85%",
+  left: "85%",
+  color: "white",
+  backgroundColor: "#38429B",
+  padding: "3px",
+  fontFamily: "Euclid Flex Trial",
   textDecoration: "none",
   zIndex: "3"
 }
