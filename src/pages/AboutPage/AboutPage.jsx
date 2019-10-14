@@ -119,11 +119,11 @@ class AboutPage extends Component {
             <span>To see my projects, click <Link style={{color: "white",textDecoration: "underline solid white"}} to="/projects">here</Link></span>
           </Text>
           <Links>
-            <span><I className="material-icons">call_made</I>&nbsp;&nbsp;<A href="https://www.linkedin.com/in/calvin-feau/" target="_blank">LinkedIn</A></span>
+            <span><I className="material-icons">call_made</I>&nbsp;&nbsp;<A href="https://www.linkedin.com/in/calvin-feau/" target="_blank" rel="noopener noreferrer">LinkedIn</A></span>
             <br />
-            <span><I className="material-icons">call_made</I>&nbsp;&nbsp;<A href="https://github.com/calvinfeau" target="_blank">Github</A></span>
+            <span><I className="material-icons">call_made</I>&nbsp;&nbsp;<A href="https://github.com/calvinfeau" target="_blank" rel="noopener noreferrer">Github</A></span>
             <br />
-            <span><I className="material-icons">call_made</I>&nbsp;&nbsp;<A href="%PUBLIC_URL%/Calvin_Feau_Resume.pdf" download target="_blank">Resume</A></span>
+            <span><I className="material-icons">call_made</I>&nbsp;&nbsp;<A href="%PUBLIC_URL%/Calvin_Feau_Resume.pdf" download target="_blank" rel="noopener noreferrer">Resume</A></span>
           </Links>
         </Main>
         <Footer>

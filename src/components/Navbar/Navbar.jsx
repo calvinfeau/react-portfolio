@@ -3,26 +3,43 @@ import {Link} from 'react-router-dom';
 import styled from "styled-components";
 
 
-const Title = styled.div`
-  width: 50%;
-  font-family: "Euclid Flex Trial";
-  font-size: 3vmax;
+let link = {
+    color: "#1a1a1a",
+    textDecoration: "none",
+    zIndex: "2",
+    fontFamily: "Euclid Flex Trial",
+};
+
+let title = {
+    fontSize: "3vmax",
+};
+
+let navLink = {
+    fontSize: "2vmax",
+};
+
+const Wrapper = styled.div`
+height: 15%;
+width: 70%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+
+@media only screen and (max-width: 800px) {
+    // how to display the navbar on tablets and mobile
+  }
 `;
 
-const navLinks = {
-  width: "25%",
-  fontSize: "2.5vmax",
-  color: "#1a1a1a"
-}
+
 
 class Navbar extends Component {
     render() {
         return (
-            <div>
-                <Title>Calvin Feau</Title>
-                <Link style={navLinks} to="/projects">Projects</Link>
-                <Link style={navLinks}to="/about">About</Link>
-            </div>
+            <Wrapper>
+                <Link style={{...link, ...navLink}} to="/projects">Projects</Link>
+                <Link style={{...link, ...title}} to="/">Calvin Feau</Link>
+                <Link style={{...link, ...navLink}}to="/about">About</Link>
+            </Wrapper>
         )
     }
 }

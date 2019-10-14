@@ -11,36 +11,52 @@ const Frame = styled.div`
 position: fixed;
 top: 0;
 left: 0;
---border-size: 50px;
-border: var(--border-size) solid #38429B;
-z-index: 2;
-background-color: transparent;
-height: calc(100vh - 100px);
-width: calc(100vw - 100px);
+background-color: black;
+height: 100vh;
+width: 100vw;
+z-index: -1;
+
+`;
+
+const Wrapper = styled.div`
+display: flex;
+flex-direction: column;
+align-items: center;
+--frame: 50px;
+margin: var(--frame);
+height: calc(100vh - (var(--frame)*2));
+width: calc(100vw - (var(--frame)*2));
+background: white;
 
 @media only screen and (max-width: 800px) {
-  --border-size: 20px;
-  height: calc(100vh - 40px);
-  width: calc(100vw - 40px);
-}
-`;
-
-const Nav = styled(Navbar)`
-  margin-top: calc(100vh - var(--border-size))
-  height: 20%;
-  width: 70%;
-`;
+  --frame: 20px;
+}`;
 
 class App extends Component {
+  constructor (props) {
+    super(props);
+    this.state = {
+      currPage: this.props
+    }
+  }
+
+
   render() {
+    console.log(this.currPage)
     return (
       <>
-      <Nav />
-      <Frame />
         <Switch>
           <Route
             exact path="/" 
-            render={() => ( <HomePage /> )}
+            render={() => ( 
+              <>
+                <Frame />
+                <Wrapper>
+                  <Navbar />
+                  <HomePage /> 
+                </Wrapper>
+              </>
+            )}
           />
           <Route
             exact path="/projects"

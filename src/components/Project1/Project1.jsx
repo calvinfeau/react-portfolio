@@ -94,7 +94,7 @@ class Project1 extends Component {
             <span>Led the development process and built the entire backend.</span>
             <span>Used Zeplin to accurately follow designers guidelines and Github for version control during development.</span>
             <span>Won the judges price of the contest.</span>
-            <a style={backBtnStyle} href="https://safeparkingla.herokuapp.com/" target="_blank">View Project</a>
+            <a style={backBtnStyle} href="https://safeparkingla.herokuapp.com/" target="_blank" rel="noopener noreferrer">View Project</a>
           </Text>
         </Main>
       </Frame>
