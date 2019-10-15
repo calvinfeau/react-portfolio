@@ -11,9 +11,10 @@ const Frame = styled.div`
 position: fixed;
 top: 0;
 left: 0;
-background-color: black;
-height: 100vh;
-width: 100vw;
+background: white;
+border: 50px solid black;
+height: calc(100vh - 100px);
+width: calc(100vw - 100px);
 z-index: -1;
 `;
 
@@ -27,7 +28,12 @@ const smallFrame = {
   margin: "20px",
   height: "calc(100vh - 40px)",
   width: "calc(100vw - 40px)",
-}
+};
+
+const projectFrame = {
+  height: "calc(400vh - 100px)",
+  width: "calc(100vw - 100px)",
+};
 
 let link = {
   color: "#1a1a1a",
@@ -40,15 +46,24 @@ let largeText = {
 };
 
 let mediumText = {
-  fontSize: "2vmax",
+  fontSize: "1vmax",
+  letterSpacing: "2px",
+  fontFamily: "GT America Trial",
+  // fontWeight: "900"
 };
+
+let normalText = {
+  fontSize: "0.75vmax",
+  fontFamily: "GT America Trial",
+  color: "black",
+}
 
 
 const Wrapper = styled.div`
 display: flex;
 flex-direction: column;
 align-items: center;
-background: white;
+background: transparent;
 ${css`${largeFrame}`};
 @media only screen and (max-width: 800px) {
   ${css`${smallFrame}`}
@@ -75,18 +90,22 @@ class App extends Component {
             exact path="/projects"
             render={() => ( 
             <>
-            <ProjectsPage /> 
+              <Frame />
+              <Wrapper>
+                <Navbar projects link={link} largeText={largeText} mediumText={mediumText} />
+                <ProjectsPage projectFrame={projectFrame} largeFrame={largeFrame} smallFrame={smallFrame} link={link} normalText={normalText} largeText={largeText} mediumText={mediumText}/> 
+              </Wrapper>
             </>)}
           />
           <Route 
             exact path="/about"
             render={() => ( 
             <>
-            <Frame />
-            <Wrapper>
-              <Navbar link={link} largeText={largeText} mediumText={mediumText} />
-              <AboutPage largeFrame={largeFrame} smallFrame={smallFrame} link={link} largeText={largeText} mediumText={mediumText}/>
-            </Wrapper>
+              <Frame />
+              <Wrapper>
+                <Navbar link={link} largeText={largeText} mediumText={mediumText} />
+                <AboutPage largeFrame={largeFrame} smallFrame={smallFrame} link={link} normalText={normalText} largeText={largeText} mediumText={mediumText}/>
+              </Wrapper>
             </>
             )}
           />

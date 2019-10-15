@@ -32,22 +32,18 @@ import styled from "styled-components";
 
 const Footer = styled.div`
   height: 20%;
-  width: 70%;
+  width: calc(100vw - 100px - 20vw);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  font-family: "Euclid Flex Trial";
-  font-size: 1.5vmax;
   border-top: 1px solid black;
 `;
 
 const Main = styled.div`
   height: 60%;
-  width: 70%;
+  width: calc(100vw - 100px - 20vw);
   display: flex;
   justify-content: space-between;
-  align-items: center;
   font-family: "GT America Trial";
   font-size: 1.3vmax;
   border-top: 1px solid black;
@@ -62,11 +58,10 @@ const Main = styled.div`
 `;
 
 const Text = styled.div`
-  height: 75%;
-  width: 70%;
+  margin-top: 10vh;
+  width: 80%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
 
   @media only screen and (max-width: 1100px) {
     width: 60%;
@@ -74,19 +69,15 @@ const Text = styled.div`
 `;
 
 const Links = styled.div`
-  height: 75%;
+  margin-top: 10vh;
   width: 20%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-
-  @media only screen and (max-width: 1100px) {
-    width: 30%;
-  }
 `;
 
 
 const A = styled.a`
+  height: 36px;
   color: black;
   text-decoration: underline solid black;
 `;
@@ -126,7 +117,7 @@ class AboutPage extends Component {
         </Main>
         <Footer>
           {/* <span>Website designed by&nbsp;<A href="https://www.pechecreme.com/" target="_blank">Peche-Creme</A></span> */}
-          <span>&copy; Copyright 2019 <Link style={this.props.link} to="/">Calvin Feau</Link></span>
+          <span style={this.props.normalText}>&copy; Copyright 2019 <Link style={this.props.normalText} to="/">Calvin Feau</Link></span>
         </Footer>
       </>
     )

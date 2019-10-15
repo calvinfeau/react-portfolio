@@ -142,6 +142,8 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
+font-family: "GT America Trial";
+font-size: 1.3vmax;
 @media only screen and (max-width: 800px) {
 }
 `;

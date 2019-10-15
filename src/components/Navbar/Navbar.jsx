@@ -1,13 +1,17 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
-import styled from "styled-components";
+import styled, {css} from "styled-components";
+
 
 const Wrapper = styled.div`
-height: 20%;
-width: 70%;
+padding: 30px 0;
+width: 100%;
 display: flex;
-justify-content: space-between;
+justify-content: space-around;
 align-items: center;
+position: sticky;
+top: 50px;
+background-color: white;
 
 @media only screen and (max-width: 800px) {
     // how to display the navbar on tablets and mobile
@@ -17,10 +21,10 @@ align-items: center;
 class Navbar extends Component {
     render() {
         return (
-            <Wrapper>
-                <Link style={{...this.props.link, ...this.props.mediumText}} to="/projects">Projects</Link>
+            <Wrapper projects={this.props.projects}>
+                <Link style={{...this.props.link, ...this.props.mediumText, ...{borderBottom: "6px solid #38429B", paddingBottom:"5px"}}} to="/projects">PROJECTS</Link>
                 <Link style={{...this.props.link, ...this.props.largeText}} to="/">Calvin Feau</Link>
-                <Link style={{...this.props.link, ...this.props.mediumText}}to="/about">About</Link>
+                <Link style={{...this.props.link, ...this.props.mediumText}}to="/about">ABOUT</Link>
             </Wrapper>
         )
     }
