@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import {Link} from 'react-router-dom';
+import styled, {css} from "styled-components";
+
 
 // *-----------*
 // ANIMATED BORDER
@@ -130,19 +131,33 @@ import {Link} from 'react-router-dom';
 //   font-size: 2.5vmax;
 // `;
 
+// HOW TO USE css + props
+// ${props => css`${props.largeFrame}`};
+// ${css`${props => props.smallFrame}`}
 
-
+const Intro = styled.div`
+height: 80%;
+width: 100%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+@media only screen and (max-width: 800px) {
+}
+`;
 
 class HomePage extends Component {
-    render() {
-        return (
-            <>
-              I'm a full stack software engineer,
-              and passionate problem solver
-              who enjoys getting lost in the flow of web development.
-            </>
-        )
-    }
+  render() {
+      return (
+        <Intro 
+        // largeFrame={this.props.largeFrame} smallFrame={this.props.smallFrame}
+        >
+          <span>I'm a full stack software engineer,</span>
+          <span> and passionate problem solver</span>
+          <span> who enjoys getting lost in the flow of web development.</span>
+        </Intro>
+      )
+  }
 }
 
 
