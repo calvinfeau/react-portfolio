@@ -2,13 +2,15 @@ import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import styled, {css} from "styled-components";
 
+const underline = `border-bottom: solid 5px #0034ff; padding-bottom: 5px`;
 
 const Wrapper = styled.div`
-padding: 30px 0;
-width: 100%;
+width: calc(100vw - 100px - 400px);
+height: 50px;
+margin: 50px 0 10vh;
 display: flex;
-justify-content: space-around;
-align-items: center;
+justify-content: space-between;
+align-items: flex-start;
 position: sticky;
 top: 50px;
 background-color: white;
@@ -18,13 +20,21 @@ background-color: white;
   }
 `;
 
+const StyledLink = styled(Link)`
+color: black;
+text-decoration: none;
+font-size: 36px;
+${props => (props.work || props.about) && css`${underline}`}
+${props => props.decor && css`:hover {${underline}}`}
+`;
+
 class Navbar extends Component {
     render() {
         return (
-            <Wrapper projects={this.props.projects}>
-                <Link style={{...this.props.link, ...this.props.mediumText, ...{borderBottom: "6px solid #38429B", paddingBottom:"5px"}}} to="/projects">PROJECTS</Link>
-                <Link style={{...this.props.link, ...this.props.largeText}} to="/">Calvin Feau</Link>
-                <Link style={{...this.props.link, ...this.props.mediumText}}to="/about">ABOUT</Link>
+            <Wrapper>
+                <StyledLink work={this.props.work} decor="true" to="/projects">Work</StyledLink>
+                <StyledLink to="/">Calvin Feau</StyledLink>
+                <StyledLink about={this.props.about} decor="true" to="/about">About</StyledLink>
             </Wrapper>
         )
     }

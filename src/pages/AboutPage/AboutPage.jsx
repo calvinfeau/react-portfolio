@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
-import styled from "styled-components";
+import styled, {css} from "styled-components";
 
 // const AboutWrapper = styled.div`
 //   height: calc(100vh - 100px);
@@ -30,55 +30,44 @@ import styled from "styled-components";
 //   border-bottom: 1px solid white;
 // `;
 
-const Footer = styled.div`
-  height: 20%;
-  width: calc(100vw - 100px - 20vw);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  border-top: 1px solid black;
-`;
 
-const Main = styled.div`
-  height: 60%;
-  width: calc(100vw - 100px - 20vw);
+const Wrapper = styled.div`
+  // HEIGHT IS TOTAL - TOP - FRAME - NAVBAR
+  // height: calc(100vh - 100px); 
+  width: calc(100vw - 100px - 400px);
   display: flex;
   justify-content: space-between;
-  font-family: "GT America Trial";
-  font-size: 1.3vmax;
-  border-top: 1px solid black;
+  font-size: 36px;
 
   @media only screen and (max-width: 425px) and (orientation: portrait) {
-    font-size: 1.2vmax;
   }
-
   @media only screen and (max-width: 850px) and (orientation: landscape) {
-    font-size: 1vmax;
   }
 `;
 
 const Text = styled.div`
-  margin-top: 10vh;
-  width: 80%;
+  width: 75%;
   display: flex;
   flex-direction: column;
+  ${props => css`${props.normalText}`}
 
-  @media only screen and (max-width: 1100px) {
-    width: 60%;
+  @media only screen and (max-width: 800px) {
+    // how to display the navbar on tablets and mobile
   }
 `;
 
 const Links = styled.div`
-  margin-top: 10vh;
-  width: 20%;
+  // width: 20%;
   display: flex;
   flex-direction: column;
 `;
 
+const Span = styled.span`
+  display: flex;
+  align-items: center;`;
 
 const A = styled.a`
-  height: 36px;
-  color: black;
+  ${props => css`${props.normalText}`}
   text-decoration: underline solid black;
 `;
 
@@ -94,31 +83,28 @@ const I = styled.i`
   }
 `;
 
+const LineJump = styled.div`height: 20px`;
 
 class AboutPage extends Component {
   render() {
     return (
       <>
-        <Main>
-          <Text>
+        <Wrapper>
+          <Text normalText={this.props.normalText}>
             I have a background in e-commerce management. I have experience in understanding clients’ needs and delivering appropriate solutions. I am also enthusiastic about guiding other people’s ideas to life by providing my skills and logic mindset.
-            <br /><br />
-            I welcome new challenges and always look for new technical knowledge to add on my skills set. I am currently considering all openings for a full stack software engineering role, or focused on backend or frontend.
-            <br /><br />
-            <span>For work inquiries, please email <A href="mailto:calvin.feau@gmail.com" target="_top">calvin.feau@gmail.com</A></span>
+            <LineJump />
+            I welcome new challenges and always look for new technical knowledge to add on my skills set. I am currently considering all openings for a full stack software engineering role, or focused on back-end or front-end.
+            <LineJump /> 
+            <span>For work inquiries, please email <A normalText={this.props.normalText} href="mailto:calvin.feau@gmail.com" target="_top">calvin.feau@gmail.com</A></span>
           </Text>
           <Links>
-            <span><I className="material-icons">call_made</I>&nbsp;&nbsp;<A href="https://www.linkedin.com/in/calvin-feau/" target="_blank" rel="noopener noreferrer">LinkedIn</A></span>
-            <br />
-            <span><I className="material-icons">call_made</I>&nbsp;&nbsp;<A href="https://github.com/calvinfeau" target="_blank" rel="noopener noreferrer">Github</A></span>
-            <br />
-            <span><I className="material-icons">call_made</I>&nbsp;&nbsp;<A href="%PUBLIC_URL%/Calvin_Feau_Resume.pdf" download target="_blank" rel="noopener noreferrer">Resume</A></span>
+            <Span><I className="material-icons">call_made</I>&nbsp;&nbsp;<A normalText={this.props.normalText} href="https://www.linkedin.com/in/calvin-feau/" target="_blank" rel="noopener noreferrer">LinkedIn</A></Span>
+            <LineJump />
+            <Span><I className="material-icons">call_made</I>&nbsp;&nbsp;<A normalText={this.props.normalText} href="https://github.com/calvinfeau" target="_blank" rel="noopener noreferrer">Github</A></Span>
+            <LineJump />
+            <Span><I className="material-icons">call_made</I>&nbsp;&nbsp;<A normalText={this.props.normalText} href="%PUBLIC_URL%/Calvin_Feau_Resume.pdf" download target="_blank" rel="noopener noreferrer">Resume</A></Span>
           </Links>
-        </Main>
-        <Footer>
-          {/* <span>Website designed by&nbsp;<A href="https://www.pechecreme.com/" target="_blank">Peche-Creme</A></span> */}
-          <span style={this.props.normalText}>&copy; Copyright 2019 <Link style={this.props.normalText} to="/">Calvin Feau</Link></span>
-        </Footer>
+        </Wrapper>
       </>
     )
   }

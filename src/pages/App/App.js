@@ -5,6 +5,7 @@ import ProjectsPage from "../ProjectsPage/ProjectsPage";
 import AboutPage from "../AboutPage/AboutPage";
 import HomePage from "../HomePage/HomePage";
 import Navbar from '../../components/Navbar/Navbar';
+import Footer from "../../components/Footer/Footer";
 import styled, {css} from "styled-components";
 
 const Frame = styled.div`
@@ -12,7 +13,7 @@ position: fixed;
 top: 0;
 left: 0;
 background: white;
-border: 50px solid black;
+border: 50px solid #0034ff;
 height: calc(100vh - 100px);
 width: calc(100vw - 100px);
 z-index: -1;
@@ -30,33 +31,26 @@ const smallFrame = {
   width: "calc(100vw - 40px)",
 };
 
-const projectFrame = {
-  height: "calc(400vh - 100px)",
-  width: "calc(100vw - 100px)",
-};
+// const projectFrame = {
+//   height: "calc(400vh - 100px)",
+//   width: "calc(100vw - 100px)",
+// };
 
-let link = {
+// ${props => (props.projects ?  css`${props.projectFrame}` : css`${props.largeFrame}`)}
+
+let normalText = {
   color: "#1a1a1a",
   textDecoration: "none",
-  fontFamily: "Euclid Flex Trial",
+  fontFamily: "GT America Trial",
+  fontSize: "30px"
 };
 
 let largeText = {
-  fontSize: "3vmax",
+  color: "#1a1a1a",
+  textDecoration: "none",
+  fontSize: "40px",
+  fontFamily: "Euclid Flex Trial",
 };
-
-let mediumText = {
-  fontSize: "1vmax",
-  letterSpacing: "2px",
-  fontFamily: "GT America Trial",
-  // fontWeight: "900"
-};
-
-let normalText = {
-  fontSize: "0.75vmax",
-  fontFamily: "GT America Trial",
-  color: "black",
-}
 
 
 const Wrapper = styled.div`
@@ -64,6 +58,7 @@ display: flex;
 flex-direction: column;
 align-items: center;
 background: transparent;
+font-family: "GT America Trial";
 ${css`${largeFrame}`};
 @media only screen and (max-width: 800px) {
   ${css`${smallFrame}`}
@@ -80,9 +75,10 @@ class App extends Component {
               <>
                 <Frame />
                 <Wrapper>
-                  <Navbar link={link} largeText={largeText} mediumText={mediumText} />
-                  <HomePage largeFrame={largeFrame} smallFrame={smallFrame} /> 
+                  <Navbar />
+                  <HomePage /> 
                 </Wrapper>
+                <Footer />
               </>
             )}
           />
@@ -91,10 +87,11 @@ class App extends Component {
             render={() => ( 
             <>
               <Frame />
-              <Wrapper>
-                <Navbar projects link={link} largeText={largeText} mediumText={mediumText} />
-                <ProjectsPage projectFrame={projectFrame} largeFrame={largeFrame} smallFrame={smallFrame} link={link} normalText={normalText} largeText={largeText} mediumText={mediumText}/> 
+              <Wrapper projects="true">
+                <Navbar work="true" />
+                <ProjectsPage /> 
               </Wrapper>
+              <Footer />
             </>)}
           />
           <Route 
@@ -103,9 +100,10 @@ class App extends Component {
             <>
               <Frame />
               <Wrapper>
-                <Navbar link={link} largeText={largeText} mediumText={mediumText} />
-                <AboutPage largeFrame={largeFrame} smallFrame={smallFrame} link={link} normalText={normalText} largeText={largeText} mediumText={mediumText}/>
+                <Navbar about="true"/>
+                <AboutPage normalText={normalText} />
               </Wrapper>
+              <Footer />
             </>
             )}
           />

@@ -135,15 +135,11 @@ import styled, {css} from "styled-components";
 // ${props => css`${props.largeFrame}`};
 // ${css`${props => props.smallFrame}`}
 
-const Intro = styled.div`
-height: 80%;
-width: 100%;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-font-family: "GT America Trial";
-font-size: 1.3vmax;
+const Wrapper = styled.div`
+width: calc(100vw - 100px - 400px);
+top: 150px;
+font-size: 4.5vmax;
+text-align: center;
 @media only screen and (max-width: 800px) {
 }
 `;
@@ -151,13 +147,14 @@ font-size: 1.3vmax;
 class HomePage extends Component {
   render() {
       return (
-        <Intro 
-        // largeFrame={this.props.largeFrame} smallFrame={this.props.smallFrame}
-        >
-          <span>I'm a full stack software engineer,</span>
-          <span> and passionate problem solver</span>
-          <span> who enjoys getting lost in the flow of web development.</span>
-        </Intro>
+        <Wrapper>
+          I'm a full stack software engineer,
+          <br />
+          and passionate problem solver
+          <br />
+          who enjoys getting lost in the 
+          <br />flow of web development.
+        </Wrapper>
       )
   }
 }
