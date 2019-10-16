@@ -40,12 +40,12 @@ class Project3 extends Component {
   render() {
     return (
       <Wrapper>
-        <Title href="https://safeparkingla.herokuapp.com/" target="_blank" rel="noopener noreferrer">SafeParking LA</Title>
-        <Tech>TECHNOLOGIES: React, Node, MongoDB, Javascript, HTML5, CSS3, Bootstrap, Mongoose</Tech>
+        <Title href="https://datebase-app.herokuapp.com/" target="_blank" rel="noopener noreferrer">Datebase</Title>
+        <Tech>TECHNOLOGIES: Python, Django, PostgreSQL, AWS, HTML5, CSS3, Materialize, Javascript</Tech>
         <Text>
-        3-day hackathon challenge for a Los Angeles based nonprofit
-          <br />providing safe parking options for people 
-          <br />experiencing homelessness in their vehicles.
+        Web platform designed to help singles tackle the messy world of dating.
+        <br />Users can store their dating contacts 
+        <br />and track their dating activity all in one convenient place.
         </Text>
       </Wrapper>
     )

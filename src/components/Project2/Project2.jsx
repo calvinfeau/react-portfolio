@@ -41,12 +41,12 @@ class Project2 extends Component {
   render() {
     return (
       <Wrapper>
-        <Title href="https://safeparkingla.herokuapp.com/" target="_blank" rel="noopener noreferrer">SafeParking LA</Title>
-        <Tech>TECHNOLOGIES: React, Node, MongoDB, Javascript, HTML5, CSS3, Bootstrap, Mongoose</Tech>
+        <Title href="https://groceries-helper.herokuapp.com/" target="_blank" rel="noopener noreferrer">Groceries Helper</Title>
+        <Tech>TECHNOLOGIES:React, Node, MongoDB, Javascript, HTML5, CSS3, Bootstrap, Jwt, Mongoose</Tech>
         <Text>
-        3-day hackathon challenge for a Los Angeles based nonprofit
-          <br />providing safe parking options for people 
-          <br />experiencing homelessness in their vehicles.
+        Full-stack MERN app 
+        <br />that assist the user 
+        <br />to track what are his/her current food stocks.
         </Text>
       </Wrapper>
     )

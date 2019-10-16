@@ -137,7 +137,7 @@ import styled, {css} from "styled-components";
 
 const Wrapper = styled.div`
 width: calc(100vw - 100px - 400px);
-top: 150px;
+margin: 10vh 0;
 font-size: 4.5vmax;
 text-align: center;
 @media only screen and (max-width: 800px) {
@@ -153,7 +153,8 @@ class HomePage extends Component {
           and passionate problem solver
           <br />
           who enjoys getting lost in the 
-          <br />flow of web development.
+          <br />
+          flow of web development.
         </Wrapper>
       )
   }

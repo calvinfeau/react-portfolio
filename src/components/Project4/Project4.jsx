@@ -40,12 +40,12 @@ class Project4 extends Component {
   render() {
     return (
       <Wrapper>
-        <Title href="https://safeparkingla.herokuapp.com/" target="_blank" rel="noopener noreferrer">SafeParking LA</Title>
-        <Tech>TECHNOLOGIES: React, Node, MongoDB, Javascript, HTML5, CSS3, Bootstrap, Mongoose</Tech>
+        <Title href="https://travel-track.herokuapp.com/" target="_blank" rel="noopener noreferrer">Travel Track</Title>
+        <Tech>Javascript, Node, MongoDB, HTML5, CSS3, EJS, Mongoose</Tech>
         <Text>
-          3-day hackathon challenge for a Los Angeles based nonprofit
-          <br />providing safe parking options for people 
-          <br />experiencing homelessness in their vehicles.
+        Full stack application offering a trip tracking service 
+        <br />and a trip organizational service.
+
         </Text>
       </Wrapper>
     )

@@ -83,7 +83,7 @@ const I = styled.i`
   }
 `;
 
-const LineJump = styled.div`height: 20px`;
+const LineJump = styled.div`height: 30px`;
 
 class AboutPage extends Component {
   render() {
