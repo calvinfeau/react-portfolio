@@ -2,6 +2,7 @@
   "name": "react-portfolio",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://www.robinwieruch.de/react-styled-components",
   "dependencies": {
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
