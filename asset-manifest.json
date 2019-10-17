@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/static/css/main.93da19b5.chunk.css",
-    "main.js": "/static/js/main.677b82f4.chunk.js",
-    "main.js.map": "/static/js/main.677b82f4.chunk.js.map",
+    "main.js": "/static/js/main.ec9106af.chunk.js",
+    "main.js.map": "/static/js/main.ec9106af.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.dfbddb88.js",
     "runtime-main.js.map": "/static/js/runtime-main.dfbddb88.js.map",
     "static/js/2.fb84d1dd.chunk.js": "/static/js/2.fb84d1dd.chunk.js",
     "static/js/2.fb84d1dd.chunk.js.map": "/static/js/2.fb84d1dd.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.a644d6f4be7ebc82b869ec599fc80be2.js": "/precache-manifest.a644d6f4be7ebc82b869ec599fc80be2.js",
+    "precache-manifest.28889b337a906e749d25c80e08f2568f.js": "/precache-manifest.28889b337a906e749d25c80e08f2568f.js",
     "service-worker.js": "/service-worker.js",
     "static/css/main.93da19b5.chunk.css.map": "/static/css/main.93da19b5.chunk.css.map",
     "static/media/index.css": "/static/media/gt-america-standard-regular.869eb9e5.woff"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.dfbddb88.js",
     "static/js/2.fb84d1dd.chunk.js",
     "static/css/main.93da19b5.chunk.css",
-    "static/js/main.677b82f4.chunk.js"
+    "static/js/main.ec9106af.chunk.js"
   ]
 }
