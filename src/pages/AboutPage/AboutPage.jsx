@@ -102,7 +102,7 @@ class AboutPage extends Component {
             <LineJump />
             <Span><I className="material-icons">call_made</I>&nbsp;&nbsp;<A normalText={this.props.normalText} href="https://github.com/calvinfeau" target="_blank" rel="noopener noreferrer">Github</A></Span>
             <LineJump />
-            <Span><I className="material-icons">call_made</I>&nbsp;&nbsp;<A normalText={this.props.normalText} href="%PUBLIC_URL%/Calvin_Feau_Resume.pdf" download target="_blank" rel="noopener noreferrer">Resume</A></Span>
+            <Span><I className="material-icons">call_made</I>&nbsp;&nbsp;<A normalText={this.props.normalText} href={process.env.PUBLIC_URL+ "/Calvin_Feau_Resume.pdf"} download target="_blank" rel="noopener noreferrer">Resume</A></Span>
           </Links>
         </Wrapper>
       </>
