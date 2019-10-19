@@ -1,17 +1,26 @@
 import React, {Component} from 'react';
-import styled, {css} from "styled-components";
+import styled from "styled-components";
 
 const Wrapper = styled.div`
-display: flex;
-flex-direction: column;
-justify-content: center;
-height: 50px;
-bottom: 0px;
-left: 250px;
-color: white;
-font-size: 0.75vmax;
-font-family: "GT America Trial";
-position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 40px;
+    left: 240px;
+    bottom: 0px;
+    color: white;
+    font-size: 0.75vmax;
+    font-family: "GT America Trial";
+    position: fixed;
+
+    @media only screen and (max-width: 1100px) {
+        height: 20px;
+        left: 145px;    
+    }
+    @media only screen and (max-width: 500px) {
+        height: 10px;
+        left: 60px;    
+    }
 `;
 
 class Footer extends Component {
@@ -21,9 +30,5 @@ class Footer extends Component {
         )
     }
 }
-
-
-{/* <span>Website designed by&nbsp;<A href="https://www.pechecreme.com/" target="_blank">Peche-Creme</A></span> */}
-
 
 export default Footer;

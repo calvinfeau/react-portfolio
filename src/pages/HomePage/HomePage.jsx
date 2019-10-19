@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
-import styled, {css} from "styled-components";
-
+import styled from "styled-components";
 
 // *-----------*
 // ANIMATED BORDER
@@ -74,73 +73,18 @@ import styled, {css} from "styled-components";
 // `;
 // *-----------*
 
-// const HomeWrapper = styled.div`
-//     // height: calc(100vh - 100px);
-//     // width: calc(100vw - 100px);
-//     // margin: 50px;
-//     // display: flex;
-//     // flex-direction: column;
-//     // align-items: center;
-//     // background-color: white;
-//     // --border-size: 50px;
-//     // border: var(--border-size) solid #1a1a1a;
-
-//     // @media only screen and (max-width: 425px), (max-height: 425px) {
-//     //     margin: 20px;
-//     //     height: calc(100vh - 40px);
-//     //     width: calc(100vw - 40px);
-//     // }
-// `;
-
-// const Title = styled.div`
-//   height: 20%;
-//   width: 50%;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   font-family: "Euclid Flex Trial";
-//   font-size: 3vmax;
-// `;
-
-// const Main = styled.div`
-//   height: 60%;
-//   width: 50%;
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-//   align-items: center;
-//   font-family: "GT America Trial";
-//   font-size: 2vmax;
-
-//   @media only screen and (max-width: 425px) and (orientation: portrait) {
-//     font-size: 1.2vmax;
-//   }
-
-//   @media only screen and (max-width: 850px) and (orientation: landscape) {
-//     font-size: 1vmax;
-//   }
-// `;
-
-// const Links = styled.div`
-//   width: 70%;
-//   height: 20%;
-//   display: flex;
-//   justify-content: space-around;
-//   align-items: center;
-//   font-family: "Euclid Flex Trial";
-//   font-size: 2.5vmax;
-// `;
-
-// HOW TO USE css + props
-// ${props => css`${props.largeFrame}`};
-// ${css`${props => props.smallFrame}`}
-
 const Wrapper = styled.div`
-width: calc(100vw - 100px - 400px);
-margin: 10vh 0;
+width: calc(100vw - 80px - 400px);
+margin: auto;
 font-size: 4.5vmax;
 text-align: center;
-@media only screen and (max-width: 800px) {
+
+@media only screen and (max-width: 1100px) {
+  width: calc(100vw - 40px - 250px);
+}
+@media only screen and (max-width: 500px) {
+  width: calc(100vw - 20px - 100px);
+  font-size: 3.5vmax;
 }
 `;
 
@@ -149,16 +93,12 @@ class HomePage extends Component {
       return (
         <Wrapper>
           I'm a full stack software engineer,
-          <br />
           and passionate problem solver
-          <br />
           who enjoys getting lost in the 
-          <br />
           flow of web development.
         </Wrapper>
       )
   }
 }
-
 
 export default HomePage;
