@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.93da19b5.chunk.css",
-    "main.js": "/static/js/main.ec9106af.chunk.js",
-    "main.js.map": "/static/js/main.ec9106af.chunk.js.map",
+    "main.css": "/static/css/main.58ebbb90.chunk.css",
+    "main.js": "/static/js/main.9f51d0df.chunk.js",
+    "main.js.map": "/static/js/main.9f51d0df.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.dfbddb88.js",
     "runtime-main.js.map": "/static/js/runtime-main.dfbddb88.js.map",
-    "static/js/2.fb84d1dd.chunk.js": "/static/js/2.fb84d1dd.chunk.js",
-    "static/js/2.fb84d1dd.chunk.js.map": "/static/js/2.fb84d1dd.chunk.js.map",
+    "static/js/2.ea280cdb.chunk.js": "/static/js/2.ea280cdb.chunk.js",
+    "static/js/2.ea280cdb.chunk.js.map": "/static/js/2.ea280cdb.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.28889b337a906e749d25c80e08f2568f.js": "/precache-manifest.28889b337a906e749d25c80e08f2568f.js",
+    "precache-manifest.96253495e3f234850913e33a57df0582.js": "/precache-manifest.96253495e3f234850913e33a57df0582.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.93da19b5.chunk.css.map": "/static/css/main.93da19b5.chunk.css.map",
+    "static/css/main.58ebbb90.chunk.css.map": "/static/css/main.58ebbb90.chunk.css.map",
     "static/media/index.css": "/static/media/gt-america-standard-regular.869eb9e5.woff"
   },
   "entrypoints": [
     "static/js/runtime-main.dfbddb88.js",
-    "static/js/2.fb84d1dd.chunk.js",
-    "static/css/main.93da19b5.chunk.css",
-    "static/js/main.ec9106af.chunk.js"
+    "static/js/2.ea280cdb.chunk.js",
+    "static/css/main.58ebbb90.chunk.css",
+    "static/js/main.9f51d0df.chunk.js"
   ]
 }
