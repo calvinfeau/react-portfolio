@@ -74,16 +74,13 @@ import styled from "styled-components";
 // *-----------*
 
 const Wrapper = styled.div`
-width: calc(100vw - 80px - 400px);
+width: calc(100% - 80px - 400px);
 margin: auto;
 font-size: 4.5vmax;
 text-align: center;
-
-@media only screen and (max-width: 1100px) {
-  width: calc(100vw - 40px - 250px);
-}
+@media only screen and (max-width: 1100px) {width: calc(100% - 40px - 250px);}
 @media only screen and (max-width: 500px) {
-  width: calc(100vw - 20px - 100px);
+  width: calc(100% - 20px - 100px);
   font-size: 3.5vmax;
 }
 `;
@@ -91,12 +88,7 @@ text-align: center;
 class HomePage extends Component {
   render() {
       return (
-        <Wrapper>
-          I'm a full stack software engineer,
-          and passionate problem solver
-          who enjoys getting lost in the 
-          flow of web development.
-        </Wrapper>
+        <Wrapper>I'm a full stack software engineer, and passionate problem solver who enjoys getting lost in the flow of web development.</Wrapper>
       )
   }
 }

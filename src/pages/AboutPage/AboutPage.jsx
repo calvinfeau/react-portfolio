@@ -2,18 +2,17 @@ import React, {Component} from 'react';
 import styled from "styled-components";
 
 const Wrapper = styled.div`
-  width: calc(100vw - 80px - 400px);
+  width: calc(100% - 80px - 400px);
   display: flex;
   justify-content: space-between;
   margin: auto;
   font-size: 2vmax;
-
   @media only screen and (max-width: 1100px) {
-    width: calc(100vw - 40px - 250px);
+    width: calc(100% - 40px - 250px);
     flex-direction: column;
   }
   @media only screen and (max-width: 500px) {
-    width: calc(100vw - 20px - 100px);
+    width: calc(100% - 20px - 100px);
   }
 `;
 
@@ -38,22 +37,17 @@ const Links = styled.div`
 
 const Span = styled.span`
   display: flex;
-  align-items: center;`;
+  align-items: center;
+  :hover {color: #0034ff}
+  `;
 
 const A = styled.a`
   color: black;
-  text-decoration: underline solid black;
+  text-decoration: underline;
+  :hover {color: #0034ff}
 `;
 
-const I = styled.i`
-  font-size: 36px;
-  @media only screen and (max-width: 1100px) {
-    font-size: 28px;
-  }
-  @media only screen and (max-width: 500px) {
-    font-size: 16px;
-  }
-`;
+const I = styled.i`font-size: 2vmax;`;
 
 const LineJump = styled.div`height: 30px`;
 

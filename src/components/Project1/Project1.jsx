@@ -1,7 +1,5 @@
 import React, {Component} from 'react';
-import styled, {css} from "styled-components";
-
-const underline = `border-bottom: solid 2px #0034ff; padding-bottom: 5px`;
+import styled from "styled-components";
 
 const Wrapper = styled.div`
   background: white;
@@ -12,22 +10,18 @@ const Wrapper = styled.div`
     padding: 25px 0;  
     border-right: none;
   }
-  @media only screen and (max-width: 500px) {
-    padding: 15px 0;
-  }
+  @media only screen and (max-width: 500px) {padding: 15px 0;}
 `;
 
 const Title = styled.a`
-  font-size: 45px;
+  font-size: 2vmax;
   color: black;
-  text-decoration: none;
-  ${css`:hover {${underline}}`}
+  text-decoration: underline;
+  :hover {color: #0034ff}
   @media only screen and (max-width: 1100px) {
     font-size: 30px;
   }
-  @media only screen and (max-width: 500px) {
-    font-size: 20px;
-  }
+  @media only screen and (max-width: 500px) {font-size: 20px;}
 `;
 
 const Tech = styled.div`
@@ -63,9 +57,7 @@ class Project1 extends Component {
       <Wrapper>
         <Title href="https://safeparkingla.herokuapp.com/" target="_blank" rel="noopener noreferrer">SafeParking LA</Title>
         <Tech>TECHNOLOGIES: React, Node, MongoDB, Javascript, HTML5, CSS3, Bootstrap, Mongoose</Tech>
-        <Text>
-        3-day hackathon challenge for a LA based nonprofit providing safe parking options for people experiencing homelessness in their vehicles.
-        </Text>
+        <Text>3-day hackathon challenge for a LA based nonprofit providing safe parking options for people experiencing homelessness in their vehicles.</Text>
       </Wrapper>
     )
   }

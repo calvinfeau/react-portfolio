@@ -1,7 +1,5 @@
 import React, {Component} from 'react';
-import styled, {css} from "styled-components";
-
-const underline = `border-bottom: solid 2px #0034ff; padding-bottom: 5px`;
+import styled from "styled-components";
 
 const Wrapper = styled.div`
   background: white;
@@ -12,22 +10,16 @@ const Wrapper = styled.div`
     border-bottom: 1px solid #a4a4a4;
     border-right: none;
   }
-  @media only screen and (max-width: 500px) {
-    padding: 15px 0;
-  }
+  @media only screen and (max-width: 500px) {padding: 15px 0;}
 `;
 
 const Title = styled.a`
-  font-size: 45px;
+  font-size: 2vmax;
   color: black;
-  text-decoration: none;
-  ${css`:hover {${underline}}`}
-  @media only screen and (max-width: 1100px) {
-    font-size: 30px;
-  }
-  @media only screen and (max-width: 500px) {
-    font-size: 20px;
-  }
+  text-decoration: underline;
+  :hover {color: #0034ff}
+  @media only screen and (max-width: 1100px) {font-size: 30px;}
+  @media only screen and (max-width: 500px) {font-size: 20px;}
 `;
 
 const Tech = styled.div`
@@ -63,9 +55,7 @@ class Project3 extends Component {
       <Wrapper>
         <Title href="https://datebase-app.herokuapp.com/" target="_blank" rel="noopener noreferrer">Datebase</Title>
         <Tech>TECHNOLOGIES: Python, Django, PostgreSQL, AWS, HTML5, CSS3, Materialize, Javascript</Tech>
-        <Text>
-        Web platform where users can store their dating contacts and track their dating activity all in one convenient place.
-        </Text>
+        <Text>Web platform where users can store their dating contacts and track their dating activity all in one convenient place.</Text>
       </Wrapper>
     )
   }
