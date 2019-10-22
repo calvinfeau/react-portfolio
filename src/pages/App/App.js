@@ -38,7 +38,6 @@ flex-direction: column;
 align-items: center;
 background: transparent;
 font-family: "GT America Trial";
-
 @media only screen and (max-width: 1100px) {
   margin: 20px;
   height: calc(100% - 40px);

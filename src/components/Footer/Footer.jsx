@@ -11,8 +11,7 @@ const Wrapper = styled.div`
     font-size: 0.75vmax;
     font-family: "GT America Trial";
     position: fixed;
-    @media only screen and (max-width: 1100px) {height: 20px;}
-    @media only screen and (max-width: 500px) {height: 10px;}
+    @media only screen and (max-width: 1400px) {display: none;}
 `;
 
 class Footer extends Component {

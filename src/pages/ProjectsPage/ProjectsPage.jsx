@@ -7,18 +7,28 @@ import Project4 from "../../components/Project4/Project4";
 
 const Wrapper = styled.div`
 width: calc(100% - 80px - 400px);
-margin: auto;
+height: calc(100% - 80px - 20%);
+margin: 0 auto 5%;
 display: grid;
 grid-template-columns: auto auto;
 grid-template-rows: auto auto;
-border-bottom: 1px solid #a4a4a4;
-border-top: 1px solid #a4a4a4;
+::-webkit-scrollbar { width: 0 !important }
+overflow: auto;
 @media only screen and (max-width: 1100px) {
   width: calc(100% - 40px - 250px);
   display: flex;
   flex-direction: column;
+  // justify-content: center;
+  height: calc(100% - 40px - 20%);
 }
-@media only screen and (max-width: 500px) {width: calc(100% - 20px - 100px);}
+@media only screen and (min-height: 1000px) and (orientation: portrait) {
+  margin: 0 auto 15%;
+  height: calc(100% - 40px - 30%);
+}
+@media only screen and (max-width: 500px) {
+  width: calc(100% - 20px - 100px);
+  height: calc(100% - 20px - 20%);
+}
 `;
 
 class ProjectsPage extends Component {

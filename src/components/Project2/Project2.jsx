@@ -2,19 +2,19 @@ import React, {Component} from 'react';
 import styled from "styled-components";
 
 const Wrapper = styled.div`
-  background: white;
-  padding: 40px 0 40px 50px;
+  padding: 5% 0 5% 5%;
   border-bottom: 1px solid #a4a4a4;
-  @media only screen and (max-width: 1100px) {padding: 25px 0;}
-  @media only screen and (max-width: 500px) {padding: 15px 0;}
-`;
+  border-top: 1px solid #a4a4a4;
+  @media only screen and (max-width: 1100px) {
+    padding: 5% 0;
+    border-top: none;
+}`;
 
 const Title = styled.a`
   font-size: 2vmax;
   color: black;
   text-decoration: underline;
   :hover {color: #0034ff}
-  @media only screen and (max-width: 1100px) {font-size: 30px;}
   @media only screen and (max-width: 500px) {font-size: 20px;}
 `;
 

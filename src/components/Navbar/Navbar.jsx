@@ -10,14 +10,21 @@ const underline = `
 
 const Wrapper = styled.div`
     width: calc(100% - 80px - 400px);
-    height: 46px;
-    margin-top: 5vh;
+    height: 10%;
+    margin: 5% 0 5%;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
     background-color: white;
-    @media only screen and (max-width: 1100px) {width: calc(100% - 40px - 250px);}
-    @media only screen and (max-width: 500px) {width: calc(100% - 20px - 100px);}
+    @media only screen and (max-width: 1100px) {
+        width: calc(100% - 40px - 250px);
+    }
+    @media only screen and (max-width: 1100px) and (orientation: portrait) and (min-height: 1000px) {
+        margin: 5% 0 15%;
+    }
+    @media only screen and (max-width: 500px) {
+        width: calc(100% - 20px - 100px);
+    }
 `;
 
 const StyledLink = styled(Link)`

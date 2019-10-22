@@ -3,16 +3,27 @@ import styled from "styled-components";
 
 const Wrapper = styled.div`
   width: calc(100% - 80px - 400px);
+  height: calc(100% - 80px - 20%);
   display: flex;
   justify-content: space-between;
-  margin: auto;
+  margin: 0 auto 5%;
   font-size: 2vmax;
+  ::-webkit-scrollbar { width: 0 !important }
+  overflow: auto;
   @media only screen and (max-width: 1100px) {
     width: calc(100% - 40px - 250px);
+    height: calc(100% - 40px - 20%);
     flex-direction: column;
+    justify-content: flex-start;
+  }
+  @media only screen and (min-height: 1000px) and (orientation: portrait) {
+    margin: 0 auto 15%;
+    height: calc(100% - 40px - 30%);
   }
   @media only screen and (max-width: 500px) {
     width: calc(100% - 20px - 100px);
+    height: calc(100% - 20px - 20%);
+    font-size: 2vmax;
   }
 `;
 
@@ -22,7 +33,7 @@ const Text = styled.div`
   flex-direction: column;
   @media only screen and (max-width: 1100px) {
     width: 100%;
-    margin-bottom: 10vh;
+    margin-bottom: 10%;
   }
 `;
 
@@ -49,7 +60,9 @@ const A = styled.a`
 
 const I = styled.i`font-size: 2vmax;`;
 
-const LineJump = styled.div`height: 30px`;
+const LineJump = styled.div`
+  height: 30px;
+`;
 
 class AboutPage extends Component {
   render() {
@@ -57,9 +70,12 @@ class AboutPage extends Component {
       <>
         <Wrapper>
           <Text>
-            I have a background in e-commerce management. I have experience in understanding clients’ needs and delivering appropriate solutions. I am also enthusiastic about guiding other people’s ideas to life by providing my skills and logic mindset.
+            {/* I have a background in e-commerce management.  */}
+            I have experience in understanding clients’ needs and delivering appropriate solutions. 
+            <br />I am also enthusiastic about guiding other people’s ideas to life by providing my skills and logic mindset.
             <LineJump />
-            I welcome new challenges and always look for new technical knowledge to add on my skills set. I am currently considering all openings for a full stack software engineering role, or focused on back-end or front-end.
+            {/* I welcome new challenges and always look for new technical knowledge to add on my skills set.  */}
+            I am currently considering all openings for a full stack software engineering role, or focused on back-end or front-end.
             <LineJump /> 
             <span>For work inquiries, please email <A href="mailto:calvin.feau@gmail.com" target="_top">calvin.feau@gmail.com</A></span>
           </Text>
