@@ -52,8 +52,8 @@ class Project1 extends Component {
     return (
       <Wrapper>
         <Title href="https://safeparkingla.herokuapp.com/" target="_blank" rel="noopener noreferrer">SafeParking LA</Title>
-        <Tech>TECHNOLOGIES: React, Node, MongoDB, Javascript, HTML5, CSS3, Bootstrap, Mongoose</Tech>
-        <Text>3-day hackathon challenge for a LA based nonprofit providing safe parking options for people experiencing homelessness in their vehicles.</Text>
+        <Tech>React, Node, MongoDB, Javascript, HTML5, CSS3, Bootstrap,&nbsp;Mongoose</Tech>
+        <Text>3-day hackathon challenge for a LA based nonprofit providing safe parking options for people experiencing homelessness in their&nbsp;vehicles.</Text>
       </Wrapper>
     )
   }

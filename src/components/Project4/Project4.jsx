@@ -47,8 +47,8 @@ class Project4 extends Component {
     return (
       <Wrapper>
         <Title href="https://travel-track.herokuapp.com/" target="_blank" rel="noopener noreferrer">Travel Track</Title>
-        <Tech>TECHNOLOGIES: Javascript, Node, MongoDB, HTML5, CSS3, EJS, Mongoose</Tech>
-        <Text>Full stack application offering a trip tracking and a trip organizational service.</Text>
+        <Tech>Javascript, Node, MongoDB, HTML5, CSS3,&nbsp;Mongoose, OAuth</Tech>
+        <Text>Full stack application offering a trip tracking and a trip organizational&nbsp;service.</Text>
       </Wrapper>
     )
   }

@@ -50,8 +50,8 @@ class Project2 extends Component {
     return (
       <Wrapper>
         <Title href="https://groceries-helper.herokuapp.com/" target="_blank" rel="noopener noreferrer">Groceries Helper</Title>
-        <Tech>TECHNOLOGIES: React, Node, MongoDB, Javascript, HTML5, CSS3, Bootstrap, Jwt, Mongoose</Tech>
-        <Text>MERN app with two main features: current food stocks tracker and a groceries planner</Text>
+        <Tech>React, Node, MongoDB, Javascript, HTML5, CSS3, Bootstrap, Jwt,&nbsp;Mongoose</Tech>
+        <Text>MERN app with two main features: current food stocks tracker and a groceries&nbsp;planner</Text>
       </Wrapper>
     )
   }

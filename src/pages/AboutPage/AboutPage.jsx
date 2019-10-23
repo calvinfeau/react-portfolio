@@ -31,6 +31,7 @@ const Text = styled.div`
   width: 70%;
   display: flex;
   flex-direction: column;
+  orphans: 3;
   @media only screen and (max-width: 1100px) {
     width: 100%;
     margin-bottom: 10%;
@@ -62,6 +63,9 @@ const I = styled.i`font-size: 2vmax;`;
 
 const LineJump = styled.div`
   height: 30px;
+  @media only screen and (max-width: 1100px) {
+    height: 20px;
+  }
 `;
 
 class AboutPage extends Component {
@@ -70,12 +74,10 @@ class AboutPage extends Component {
       <>
         <Wrapper>
           <Text>
-            {/* I have a background in e-commerce management.  */}
-            I have experience in understanding clients’ needs and delivering appropriate solutions. 
-            <br />I am also enthusiastic about guiding other people’s ideas to life by providing my skills and logic mindset.
+            I have experience in understanding clients’ needs and delivering appropriate&nbsp;solutions. 
+            <br />I am also enthusiastic about guiding other people’s ideas to life by providing my skills and logical&nbsp;mindset.
             <LineJump />
-            {/* I welcome new challenges and always look for new technical knowledge to add on my skills set.  */}
-            I am currently considering all openings for a full stack software engineering role, or focused on back-end or front-end.
+            I am currently considering all openings for a full stack software engineering role, or focused on back-end&nbsp;or&nbsp;front-end.
             <LineJump /> 
             <span>For work inquiries, please email <A href="mailto:calvin.feau@gmail.com" target="_top">calvin.feau@gmail.com</A></span>
           </Text>

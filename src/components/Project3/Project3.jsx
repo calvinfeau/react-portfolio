@@ -51,8 +51,8 @@ class Project3 extends Component {
     return (
       <Wrapper>
         <Title href="https://datebase-app.herokuapp.com/" target="_blank" rel="noopener noreferrer">Datebase</Title>
-        <Tech>TECHNOLOGIES: Python, Django, PostgreSQL, AWS, HTML5, CSS3, Materialize, Javascript</Tech>
-        <Text>Web platform where users can store their dating contacts and track their dating activity all in one convenient place.</Text>
+        <Tech>Python, Django, PostgreSQL, AWS, HTML5, CSS3, Materialize,&nbsp;Javascript</Tech>
+        <Text>Web platform where users can store their dating contacts and track their dating activity all in one convenient&nbsp;place.</Text>
       </Wrapper>
     )
   }

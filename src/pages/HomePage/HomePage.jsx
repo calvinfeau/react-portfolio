@@ -86,13 +86,19 @@ text-align: center;
   height: calc(100% - 40px - 20%);
   font-size: 4vmax;
 }
+
+// IPAD PORTRAIT
 @media only screen and (min-height: 1000px) and (orientation: portrait) {
   margin: 0 auto 15%;
   height: calc(100% - 40px - 30%);
+  font-size: 5vmin;
 }
+
+// MOBILE LANDSCAPE
 @media only screen and (min-height: 500px) and (max-height: 1100px) and (orientation: landscape) {
-  font-size: 5  vmax;
+  font-size: 5vmax;
 }
+
 @media only screen and (max-width: 500px) {
   width: calc(100% - 20px - 100px);
   height: calc(100% - 20px - 20%);
@@ -103,7 +109,7 @@ text-align: center;
 class HomePage extends Component {
   render() {
       return (
-        <Wrapper>I'm a full stack software engineer, and a passionate problem solver who enjoys getting lost in the flow of web development.</Wrapper>
+        <Wrapper>I'm a full stack software engineer, and a passionate problem solver who enjoys getting lost in the flow of web&nbsp;development.</Wrapper>
       )
   }
 }
