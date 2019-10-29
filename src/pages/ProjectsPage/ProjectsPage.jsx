@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import styled from "styled-components";
+import styled, {keyframes} from "styled-components";
+import {fadeInUp} from "react-animations";
 import Project1 from "../../components/Project1/Project1";
 import Project2 from "../../components/Project2/Project2";
 import Project3 from "../../components/Project3/Project3";
@@ -31,15 +32,19 @@ overflow: auto;
 }
 `;
 
+const FadeInUp = styled(Wrapper)`
+animation: 0.75s ${keyframes`${fadeInUp}`} -0.25s 1 ease-out;
+`;
+
 class ProjectsPage extends Component {
   render() {
     return (
-      <Wrapper>
+      <FadeInUp>
         <Project1 />
         <Project2 />
         <Project3 />
         <Project4 />
-      </Wrapper>
+      </FadeInUp>
     )
   }
 }

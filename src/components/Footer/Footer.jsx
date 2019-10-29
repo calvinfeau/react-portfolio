@@ -1,13 +1,14 @@
 import React, {Component} from 'react';
-import styled from "styled-components";
+import styled, {css} from "styled-components";
 
 const Wrapper = styled.div`
+    ${props => props.theme && css`${props.theme}`}
     display: flex;
     flex-direction: column;
     justify-content: center;
     height: 40px;
     bottom: 0px;
-    color: white;
+    color: var(--color-2); 
     font-size: 0.75vmax;
     font-family: "GT America Trial";
     position: fixed;
@@ -17,7 +18,7 @@ const Wrapper = styled.div`
 class Footer extends Component {
     render() {
         return (
-            <Wrapper>&copy; Copyright 2019 Calvin Feau</Wrapper>
+            <Wrapper theme={this.props.theme}>&copy; 2019 Calvin Feau</Wrapper>
         )
     }
 }

@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
-import styled from "styled-components";
+import styled, {keyframes} from "styled-components";
+import {fadeInUp} from "react-animations";
+
 
 const Wrapper = styled.div`
   width: calc(100% - 80px - 400px);
@@ -32,9 +34,13 @@ const Text = styled.div`
   display: flex;
   flex-direction: column;
   orphans: 3;
-  @media only screen and (max-width: 1100px) {
+  @media only screen and (max-width: 1100px) and (orientation: portrait) {
     width: 100%;
-    margin-bottom: 10%;
+    margin-bottom: 15%;
+  }
+  @media only screen and (max-width: 1100px) and (orientation: landscape) {
+    width: 100%;
+    margin-bottom: 5%;
   }
 `;
 
@@ -43,20 +49,21 @@ const Links = styled.div`
   flex-direction: column;
   @media only screen and (max-width: 1100px) {
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
   }
 `;
 
 const Span = styled.span`
   display: flex;
   align-items: center;
-  :hover {color: #0034ff}
+  :hover {color: #092CBE;}
   `;
 
 const A = styled.a`
+  cursor: url('/Cursor.png'), auto;
   color: black;
   text-decoration: underline;
-  :hover {color: #0034ff}
+  :hover {color: #092CBE;}
 `;
 
 const I = styled.i`font-size: 2vmax;`;
@@ -64,15 +71,20 @@ const I = styled.i`font-size: 2vmax;`;
 const LineJump = styled.div`
   height: 30px;
   @media only screen and (max-width: 1100px) {
-    height: 20px;
+    height: 10px;
+    width: 20px;
   }
+`;
+
+const FadeInUp = styled(Wrapper)`
+animation: 1s ${keyframes`${fadeInUp}`} -0.25s 1 ease-out;
 `;
 
 class AboutPage extends Component {
   render() {
     return (
       <>
-        <Wrapper>
+        <FadeInUp>
           <Text>
             I have experience in understanding clients’ needs and delivering appropriate&nbsp;solutions. 
             <br />I am also enthusiastic about guiding other people’s ideas to life by providing my skills and logical&nbsp;mindset.
@@ -88,7 +100,7 @@ class AboutPage extends Component {
             <LineJump />
             <Span><I className="material-icons">call_made</I>&nbsp;&nbsp;<A href={process.env.PUBLIC_URL+ "/Calvin_Feau_Resume.pdf"} download target="_blank" rel="noopener noreferrer">Resume</A></Span>
           </Links>
-        </Wrapper>
+        </FadeInUp>
       </>
     )
   }

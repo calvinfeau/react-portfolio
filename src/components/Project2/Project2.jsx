@@ -11,10 +11,11 @@ const Wrapper = styled.div`
 }`;
 
 const Title = styled.a`
+  cursor: url('/Cursor.png'), auto;
   font-size: 2vmax;
   color: black;
   text-decoration: underline;
-  :hover {color: #0034ff}
+  :hover {color: #092CBE}
   @media only screen and (max-width: 500px) {font-size: 20px;}
 `;
 

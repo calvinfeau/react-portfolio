@@ -1,5 +1,8 @@
 import React, {Component} from 'react';
-import styled from "styled-components";
+import styled, {keyframes} from "styled-components";
+import {TransitionGroup} from 'react-transition-group';
+import {fadeIn} from "react-animations";
+import Title from "../../components/Title/Title";
 
 // *-----------*
 // ANIMATED BORDER
@@ -71,16 +74,56 @@ import styled from "styled-components";
 //       }
 // }
 // `;
+
 // *-----------*
 
+// ANIMATION 1 
+
+// const Anim = styled.span`
+// position: absolute;
+// animation-timing-function: linear;
+// animation-iteration-count: 1;
+// animation-delay: 0.5s;
+
+// font-smoothing: antialiased !important;
+// -webkit-backface-visibility: hidden;
+// -webkit-transform: translateZ(0) scale(1.0, 1.0);
+// transform: translateZ(0);
+
+// @keyframes animate {
+//   0% {transform: translateX(0);} 
+//   100% {transform: translateX(-200%);}
+// }
+// `;
+
+// const Anim1 = styled(Anim)`
+// left: 100%;
+// animation-name: animate;
+// animation-duration: 12s;
+// `;
+
+// const Anim2 = styled(Anim)`
+// left: 100%;
+// animation-name: animate;
+// animation-duration: 12s;
+// animation-delay: 6.5s;
+// `;
+// var text1 = 'Interactive';
+// var text2 = 'Developer';
+
+// *-----------*
+
+
 const Wrapper = styled.div`
-width: calc(100% - 80px - 400px);
-height: calc(100% - 80px - 20%);
+width: 100%;
+height: calc(100% - 80px - 15%);
 margin: 0 auto 5%;
-font-size: 5vmax;
 display: flex;
+flex-direction: column;
+justify-content: space-between;
 align-items: center;
-text-align: center;
+color: white;
+
 @media only screen and (max-width: 1100px) {
   width: calc(100% - 40px - 250px);
   height: calc(100% - 40px - 20%);
@@ -94,22 +137,65 @@ text-align: center;
   font-size: 5vmin;
 }
 
-// MOBILE LANDSCAPE
-@media only screen and (min-height: 500px) and (max-height: 1100px) and (orientation: landscape) {
-  font-size: 5vmax;
-}
-
 @media only screen and (max-width: 500px) {
   width: calc(100% - 20px - 100px);
   height: calc(100% - 20px - 20%);
   font-size: 3.5vmax;
+}
+
+// MOBILE LANDSCAPE
+// @media only screen and (min-height: 500px) and (max-height: 1100px) and (orientation: landscape) {
+//   font-size: 5vmax;
+// }
+`;
+
+const Anim = styled(TransitionGroup)`
+font-family: "Euclid Flex Trial";
+font-size: 7vmax;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+height: 75%;
+
+@media only screen and (max-width: 1100px) {
+  font-size: 5vmax;
+}
+`;
+
+// const Span1 = styled.div`
+// opacity: 0;
+// animation: animate 0.5s 1s linear 1 forwards;
+// `;
+
+// const Span2 = styled.div`
+// color: #092CBE;
+// -webkit-text-stroke: 2px white;
+// opacity: 0;
+// animation: animate 0.5s 2s linear 1 forwards;
+// `;
+
+const Text = styled.div`
+font-size: 2vmax;
+text-align: center;
+opacity: 0;
+animation: 1.5s fadeIn 2s linear 1 forwards;
+
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
 }
 `;
 
 class HomePage extends Component {
   render() {
       return (
-        <Wrapper>I'm a full stack software engineer, and a passionate problem solver who enjoys getting lost in the flow of web&nbsp;development.</Wrapper>
+        <Wrapper>
+          <Anim>
+            <Title />
+          </Anim>
+          <Text>I'm a full stack software engineer&nbsp;and&nbsp;a&nbsp;natural&nbsp;problem&nbsp;solver<br />who&nbsp;enjoys&nbsp;getting&nbsp;lost in&nbsp;the&nbsp;flow&nbsp;of&nbsp;web&nbsp;development.</Text>
+        </Wrapper>
       )
   }
 }
