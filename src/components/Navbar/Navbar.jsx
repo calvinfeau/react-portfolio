@@ -68,7 +68,7 @@ class Navbar extends Component {
             <Wrapper theme={this.props.theme}>
                 <StyledLink theme={this.props.theme} calvin="true" to="/">Calvin Feau</StyledLink>
                 <Div>
-                    <StyledLink theme={this.props.theme} space="true" work={this.props.work} decor="true" to="/projects">Work</StyledLink>
+                    <StyledLink theme={this.props.theme} space="true" work={this.props.work} decor="true" to="/projects">Projects</StyledLink>
                     <StyledLink theme={this.props.theme} about={this.props.about} decor="true" to="/about">About</StyledLink>
                 </Div>
             </Wrapper>

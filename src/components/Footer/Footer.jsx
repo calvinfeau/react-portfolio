@@ -18,7 +18,7 @@ const Wrapper = styled.div`
 class Footer extends Component {
     render() {
         return (
-            <Wrapper theme={this.props.theme}>&copy; 2019 Calvin Feau</Wrapper>
+            <Wrapper theme={this.props.theme}>&copy; 2021 Calvin Feau</Wrapper>
         )
     }
 }
