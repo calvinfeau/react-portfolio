@@ -1,8 +1,8 @@
-import React, {Component} from 'react';
-import styled, {keyframes} from "styled-components";
-import {TransitionGroup} from 'react-transition-group';
-import {fadeIn} from "react-animations";
-import Title from "../../components/Title/Title";
+import React from 'react';
+import styled from "styled-components";
+
+// import {TransitionGroup} from 'react-transition-group';
+// import {fadeIn} from "react-animations";
 
 // *-----------*
 // ANIMATED BORDER
@@ -113,55 +113,48 @@ import Title from "../../components/Title/Title";
 
 // *-----------*
 
-
 const Wrapper = styled.div`
-width: 100%;
-height: calc(100% - 80px - 15%);
-margin: 0 auto 5%;
-display: flex;
-flex-direction: column;
-justify-content: space-between;
-align-items: center;
-color: white;
+  width: calc(100% - 200px);
+  height: calc(100% - 80px - 10%);
+  margin: 0 auto 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 
-@media only screen and (max-width: 1100px) {
-  width: calc(100% - 40px - 250px);
-  height: calc(100% - 40px - 20%);
-  font-size: 4vmax;
-}
+  @media only screen and (max-width: 1100px) {
+    width: calc(100% - 40px - 100px);
+    height: calc(100% - 40px - 20%);
+    font-size: 4vmax;
+  }
 
-// IPAD PORTRAIT
-@media only screen and (min-height: 1000px) and (orientation: portrait) {
-  margin: 0 auto 15%;
-  height: calc(100% - 40px - 30%);
-  font-size: 5vmin;
-}
+  // IPAD PORTRAIT
+  @media only screen and (min-height: 1000px) and (orientation: portrait) {
+    margin: 0 auto 15%;
+    height: calc(100% - 40px - 30%);
+    font-size: 5vmin;
+  }
 
-@media only screen and (max-width: 500px) {
-  width: calc(100% - 20px - 100px);
-  height: calc(100% - 20px - 20%);
-  font-size: 3.5vmax;
-}
+  @media only screen and (max-width: 500px) {
+    width: calc(100% - 20px - 50px);
+    height: calc(100% - 20px - 20%);
+    font-size: 3.5vmax;
+  }
+`;
 
-// MOBILE LANDSCAPE
-// @media only screen and (min-height: 500px) and (max-height: 1100px) and (orientation: landscape) {
+// const Anim = styled(TransitionGroup)`
+// font-family: "Euclid Flex Trial";
+// font-size: 7vmax;
+// display: flex;
+// flex-direction: column;
+// align-items: center;
+// justify-content: center;
+// height: 75%;
+
+// @media only screen and (max-width: 1100px) {
 //   font-size: 5vmax;
 // }
-`;
-
-const Anim = styled(TransitionGroup)`
-font-family: "Euclid Flex Trial";
-font-size: 7vmax;
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-height: 75%;
-
-@media only screen and (max-width: 1100px) {
-  font-size: 5vmax;
-}
-`;
+// `;
 
 // const Span1 = styled.div`
 // opacity: 0;
@@ -176,28 +169,39 @@ height: 75%;
 // `;
 
 const Text = styled.div`
-font-size: 2vmax;
-text-align: center;
-opacity: 0;
-animation: 1.5s fadeIn 2s linear 1 forwards;
+  font-family: "GT America Trial";
+  font-size: 7vmax;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  opacity: 0;
+  animation: 1.5s fadeIn 0.2s linear 1 forwards;
+  line-height: 1;
+  text-align: center;
+  color: #c4c5fe;
 
-@keyframes fadeIn {
-  0% {opacity: 0;}
-  100% {opacity: 1;}
-}
+  @keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+  }
+
+  @media only screen and (min-width: 1800px) {
+    font-size: 5vmax;
+  }
+
+  @media only screen and (max-width: 1100px) {
+    font-size: 5vmax;
+  }
 `;
 
-class HomePage extends Component {
-  render() {
-      return (
-        <Wrapper>
-          <Anim>
-            <Title />
-          </Anim>
-          <Text>I'm a full stack software engineer&nbsp;and&nbsp;a&nbsp;natural&nbsp;problem&nbsp;solver<br />who&nbsp;enjoys&nbsp;getting&nbsp;lost in&nbsp;the&nbsp;flow&nbsp;of&nbsp;web&nbsp;development.</Text>
-        </Wrapper>
-      )
-  }
-}
+
+const HomePage = () => 
+  <Wrapper>
+    <Text>
+      I’m a French front-end developer based in Portland, Oregon.
+    </Text>
+  </Wrapper>
 
 export default HomePage;

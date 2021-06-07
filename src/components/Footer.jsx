@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import styled, {css} from "styled-components";
 
 const Wrapper = styled.div`
@@ -12,15 +12,20 @@ const Wrapper = styled.div`
     font-size: 0.75vmax;
     font-family: "GT America Trial";
     position: fixed;
-    @media only screen and (max-width: 1400px) {display: none;}
+    :hover {
+        color: var(--color-3);
+    }
+
+    @media only screen and (max-width: 1100px) {
+        height: 20px;
+    }
+
+    @media only screen and (max-width: 500px) {
+        height: 10px;
+    }
 `;
 
-class Footer extends Component {
-    render() {
-        return (
-            <Wrapper theme={this.props.theme}>&copy; 2021 Calvin Feau</Wrapper>
-        )
-    }
-}
+const Footer = (props) => 
+    <Wrapper theme={props.theme}>&copy; 2021 Calvin Feau</Wrapper>
 
 export default Footer;
