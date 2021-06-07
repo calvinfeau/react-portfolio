@@ -169,7 +169,7 @@ const Wrapper = styled.div`
 // `;
 
 const Text = styled.div`
-  font-family: "GT America Trial";
+  // font-family: "GT America Trial";
   font-size: 7vmax;
   display: flex;
   flex-direction: column;

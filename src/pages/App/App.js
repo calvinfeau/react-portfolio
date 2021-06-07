@@ -50,7 +50,7 @@ const Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
   background: transparent;
-  font-family: "GT America Trial";
+  font-family: "GT America Light";
 
   @media only screen and (max-width: 1100px) {
     margin: 20px;

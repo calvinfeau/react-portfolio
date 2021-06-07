@@ -9,7 +9,7 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
   margin: auto;
-  font-size: 2vmax;
+  font-size: 36px;
   ::-webkit-scrollbar { width: 0 !important }
   overflow: auto;
 
@@ -80,7 +80,7 @@ const A = styled.a`
 `;
 
 const I = styled.i`
-  font-size: 2vmax;
+  font-size: 36px;
 `;
 
 const LineJump = styled.div`

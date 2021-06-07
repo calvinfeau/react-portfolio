@@ -14,7 +14,7 @@ const Wrapper = styled.div`
 
 const Title = styled.a`
   cursor: url('/cf_cursor.svg'), auto;
-  font-size: 2.5vmax;
+  font-size: 36px;
   color: white;
   text-decoration: none;
   :hover {
