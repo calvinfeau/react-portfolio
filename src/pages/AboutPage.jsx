@@ -69,8 +69,14 @@ const Span = styled.span`
 const A = styled.a`
   cursor: url('/cf_cursor.svg'), auto;
   color: white;
-  text-decoration: underline;
-  :hover {color: #c4c5fe;}
+  padding-bottom: 2px;
+  border-bottom: solid 3px white; 
+
+  text-decoration: none;
+  :hover {
+    color: #c4c5fe;
+    border-bottom: solid 3px #c4c5fe; 
+  }
 `;
 
 const I = styled.i`

@@ -3,7 +3,8 @@ import styled from "styled-components";
 
 const Wrapper = styled.div`
   padding: 5% 5% 5% 0;
-  border-top: 1px solid #9d9d9d;
+  border-top: 1px solid #3b3b3b;
+  font-family: "GT America Light";
 
   @media only screen and (max-width: 1100px) {
     padding: 5% 0;
@@ -62,7 +63,7 @@ const Project = (props) => {
     <Wrapper>
       <Title href={`${props.url}`} target="_blank" rel="noopener noreferrer">{props.title}</Title>
       <Text>{props.description}</Text>
-      <Tech>TECHNOLOGIES: {props.tech}</Tech>
+      <Tech>TECHNOLOGIES: {props.tech}&nbsp;{props.techEnd}</Tech>
     </Wrapper>
   )
 }

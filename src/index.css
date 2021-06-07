@@ -26,3 +26,8 @@ code {
   font-family: 'GT Pressura Mono';
   src: url('./fonts/GT-Pressura-Mono-Regular.woff') format('woff');
 }
+
+@font-face {
+  font-family: "GT America Light";
+  src: url("./fonts/gt-america-light.woff");
+}

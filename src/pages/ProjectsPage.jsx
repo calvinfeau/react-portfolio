@@ -7,25 +7,29 @@ const projects = [
   {
     title: "SafeParking LA",
     description: "3-day hackathon challenge for a LA based nonprofit providing safe parking options for people experiencing homelessness in their vehicles.",
-    tech: "React, Node, MongoDB, Javascript, HTML5, CSS3, Bootstrap, Mongoose",
+    tech: "HTML5, CSS3, Javascript, React, Node, Bootstrap, MongoDB,",
+    techEnd: "Mongoose",
     url: "https://safeparkingla.herokuapp.com/"
   },
   {
     title: "Groceries Helper",
     description: "MERN app with two main features: current food stocks tracker and a groceries planner",
-    tech: "React, Node, MongoDB, Javascript, HTML5, CSS3, Bootstrap, Jwt, Mongoose",
+    tech: "HTML5, CSS3, Javascript, React, Node, Bootstrap, MongoDB, Mongoose,",
+    techEnd: "JSON Web Tokens",
     url: "https://groceries-helper.herokuapp.com/"
   },
   {
     title: "Datebase",
     description: "Web platform where users can store their dating contacts and track their dating activity all in one convenient place.",
-    tech: "Python, Django, PostgreSQL, AWS, HTML5, CSS3, Materialize, Javascript",
+    tech: "HTML5, CSS3, Javascript, Python, Django, Materialize, PostgreSQL,",
+    techEnd: "AWS S3 Storage",
     url: "https://datebase-app.herokuapp.com/"
   },
   {
     title: "Travel Track",
     description: "Full stack application offering a trip tracking and a trip organizational service.",
-    tech: "Javascript, Node, MongoDB, HTML5, CSS3, Mongoose, OAuth",
+    tech: "HTML5, CSS3, Javascript, Node, Express, Passport, OAuth, MongoDB,",
+    techEnd: "Mongoose",
     url: "https://travel-track.herokuapp.com/"
   }
 ];
@@ -69,7 +73,7 @@ const ProjectsPage = () => {
   return (
     <FadeInUp>
       {projects.map((project, idx) => 
-        <Project key={idx} title={project.title} description={project.description} tech={project.tech} url={project.url} />
+        <Project key={idx} title={project.title} description={project.description} tech={project.tech} techEnd={project.techEnd} url={project.url} />
       )}
 
     </FadeInUp>

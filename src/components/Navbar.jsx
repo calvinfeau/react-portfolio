@@ -10,7 +10,6 @@ const underline =`
 
 const Wrapper = styled.div`
     width: calc(100% - 80px - 200px);
-    // margin: 3% 0 5%;
     margin-top: 3%;
     display: flex;
     justify-content: space-between;
@@ -18,7 +17,7 @@ const Wrapper = styled.div`
     background-color: var(--color-2);
 
     ${props => (props.work || props.about) && css`
-        padding-bottom: 3px;
+        padding-bottom: 2px;
         border-bottom: solid 3px var(--color-2); 
 
         @media only screen and (max-width: 1100px) {
@@ -49,7 +48,7 @@ const StyledLink = styled(Link)`
     text-decoration: none;
     font-size: 1.5vmax;
     ${props => !props.calvin && css`
-        padding-bottom: 3px;
+        padding-bottom: 2px;
         border-bottom: solid 3px var(--color-2); 
         @media only screen and (max-width: 1100px) {margin-bottom: 2px;}
         @media only screen and (max-width: 500px) {margin-bottom: 1px;}
