@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4f78191b3854d91f342e14aaf2e80914",
+    "revision": "e34b04228274069692277fb7bded1126",
     "url": "/index.html"
   },
   {
-    "revision": "827a013e54e199d41fb5",
-    "url": "/static/css/main.58ebbb90.chunk.css"
+    "revision": "2eb8a9514f88df43d0cc",
+    "url": "/static/css/main.3fa68c12.chunk.css"
   },
   {
     "revision": "5376a16ec43273dc84da",
     "url": "/static/js/2.661d0555.chunk.js"
   },
   {
-    "revision": "827a013e54e199d41fb5",
-    "url": "/static/js/main.86a7c569.chunk.js"
+    "revision": "2eb8a9514f88df43d0cc",
+    "url": "/static/js/main.5b6edf72.chunk.js"
   },
   {
     "revision": "dd6d83088f6390651648",
@@ -26,6 +26,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "5977c2da335a44f0e11e6bd559e80c84",
     "url": "/static/media/GT-Pressura-Mono-Regular.5977c2da.woff"
+  },
+  {
+    "revision": "6f2e6aeddb28f50ed004bdb7da52ea5c",
+    "url": "/static/media/gt-america-light.6f2e6aed.woff"
   },
   {
     "revision": "869eb9e5904708d2b3f3109319f72194",
